@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Project>
+
+@{
+    Layout = null;
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(p => p.Id)</th>
+            <th>@Html.DisplayNameFor(p => p.Title)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var project in Model)
+        {
+            @Html.Partial("_Project", project)
+        }
+    </tbody>
+</table>
